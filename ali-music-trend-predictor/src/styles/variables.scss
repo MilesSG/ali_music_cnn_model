@@ -1,0 +1,29 @@
+// 颜色变量
+$primary-color: #0ea5e9;
+$secondary-color: #d946ef;
+$success-color: #22c55e;
+$warning-color: #f59e0b;
+$danger-color: #ef4444;
+$info-color: #3b82f6;
+
+// 响应式断点
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+  '2xl': 1536px,
+);
+
+// 动画时间
+$transition-fast: 150ms;
+$transition-normal: 250ms;
+$transition-slow: 350ms;
+
+// 边距和尺寸
+$container-padding: 1rem;
+$spacing-unit: 0.25rem;
+
+// 字体
+$font-family-sans: 'Inter', system-ui, sans-serif;
+$font-family-mono: ui-monospace, monospace; 
