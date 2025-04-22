@@ -1,55 +1,85 @@
-# 🎵 阿里音乐趋势预测系统
+# 🎵 阿里音乐趋势预测系统 (Ali Music Trend Prediction System)
 
-🔮 基于CNN深度学习模型的音乐流行趋势预测与可视化系统，用于分析和预测阿里音乐平台上的音乐流行趋势。
+<p align="center">
+  <img src="ali-music-trend-predictor/public/logo.svg" alt="阿里音乐趋势预测系统" width="200"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Vue.js-3.3.4-42b883" alt="Vue.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0.2-3178c6" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-4.4.5-646cff" alt="Vite" />
+  <img src="https://img.shields.io/badge/TensorFlow-2.12.0-ff6f00" alt="TensorFlow" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" />
+</p>
+
+## 📝 项目介绍
+
+这是一个基于CNN模型的音乐流行趋势预测与可视化系统，旨在通过分析音乐特征来预测歌曲的未来流行度。该项目使用深度学习技术对音频数据进行处理和分析，并通过现代化的前端界面展示分析结果，为音乐创作者和发行方提供数据支持。
 
 ## ✨ 项目特点
 
-- 🧠 **CNN模型预测**：利用卷积神经网络的强大特征提取和学习能力，精准预测音乐流行趋势
-- 📊 **数据可视化**：提供多种交互式图表，直观展示数据分析结果
-- 🎨 **现代化界面**：流畅的用户体验与精美的视觉设计
-- 💾 **高效数据管理**：支持数据集的上传、管理和预处理
-- 🔍 **深度分析**：提供音乐特征与流行度的相关性分析和聚类分析
+- 🎯 **趋势预测**：准确预测艺人和音乐作品未来走势
+- 📊 **数据可视化**：直观展示音乐市场数据和预测结果
+- 🧠 **AI驱动**：基于CNN深度学习模型的智能分析系统
+- 🔄 **实时更新**：支持数据实时刷新和定期更新
+- 🌙 **深色模式**：支持明暗主题切换，提升用户体验
+- 📱 **响应式设计**：完美适配各种设备尺寸
 
 ## 🛠️ 技术栈
 
+### 前端
 - 🖼️ **前端框架**：Vue 3 + TypeScript
 - 🧩 **UI组件**：Element Plus + Tailwind CSS
 - 📈 **数据可视化**：ECharts
-- 🤖 **深度学习**：TensorFlow.js
 - 🚀 **构建工具**：Vite
 - 🗄️ **状态管理**：Pinia
 - 🧭 **路由管理**：Vue Router
+- 🔧 **工具库**：VueUse
+
+### 后端/模型
+- 🐍 **Python**
+- 🧠 **TensorFlow/Keras**
+- 🎵 **音频处理库** (Librosa)
+- 📊 **数据分析库** (Pandas, NumPy)
 
 ## 📋 项目功能
 
 1. 📱 **仪表盘**：总览系统数据和关键指标
 2. 📈 **趋势预测**：展示音乐流行度预测结果
-3. 🔎 **数据分析**：提供深入的数据分析和可视化
-4. 🗃️ **数据管理**：管理数据集和执行数据预处理
+3. 👨‍🎤 **艺术家分析**：分析艺术家影响力和发展趋势
+4. 🎵 **歌曲数据**：详细展示歌曲特征和表现
+5. 🎸 **流派分析**：不同音乐流派的流行趋势分析
+6. ⚙️ **系统设置**：个性化配置和数据管理
 
 ## 🚀 快速开始
 
-### 环境要求
-
-- Node.js 18+
-- npm 9+
-
-### 安装依赖
+### 前端项目
 
 ```bash
+# 进入前端项目目录
+cd ali-music-trend-predictor
+
+# 安装依赖
 npm install
-```
 
-### 开发模式启动
-
-```bash
+# 开发环境启动
 npm run dev
+
+# 生产环境构建
+npm run build
 ```
 
-### 生产环境构建
+### 模型部分
 
 ```bash
-npm run build
+# 安装依赖
+pip install -r requirements.txt
+
+# 运行模型训练
+python train_model.py
+
+# 启动预测服务
+python predict_service.py
 ```
 
 ## 🌐 浏览器支持
@@ -61,12 +91,28 @@ npm run build
 
 ## 📊 数据处理流程
 
-1. 📥 数据收集
-2. 🧹 数据预处理和清洗
-3. 🔍 特征提取和工程
-4. 🧠 CNN模型训练
-5. 🔮 趋势预测和分析
-6. 📊 可视化展示
+1. 📥 数据收集与清洗
+2. 🔍 特征提取和工程
+3. 🧠 CNN模型训练
+4. 🔮 趋势预测和分析
+5. 📊 可视化展示
+
+## 📚 项目结构
+
+```
+├── ali-music-trend-predictor/    # 前端项目
+│   ├── public/                   # 静态资源
+│   └── src/                      # 源代码
+│       ├── assets/               # 资源文件
+│       ├── components/           # 组件
+│       ├── views/                # 页面视图
+│       ├── App.vue               # 根组件
+│       └── main.ts               # 入口文件
+└── model/                        # 模型部分
+    ├── data/                     # 数据集
+    ├── notebooks/                # 实验笔记本
+    └── src/                      # 模型源代码
+```
 
 ## 👨‍💻 开发团队
 
@@ -74,4 +120,8 @@ npm run build
 
 ## 📝 许可证
 
-[MIT](LICENSE) 
+MIT
+
+---
+
+<p align="center">© 2025 阿里音乐趋势预测系统. All Rights Reserved.</p> 

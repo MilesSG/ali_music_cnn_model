@@ -306,64 +306,14 @@ function changeTimeRange(range: string) {
   timeRange.value = range
   updateTimeSeriesChart()
 }
+
+console.log('分析页面组件加载')
 </script>
 
 <template>
-  <div>
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">音乐数据分析</h1>
-      <p class="text-gray-600 dark:text-gray-400">
-        深入分析音乐数据，发现流行趋势和模式，辅助决策
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-      <!-- 流派流行度对比图 -->
-      <div class="card">
-        <div ref="genrePopularityChart" class="h-80"></div>
-      </div>
-
-      <!-- 时间序列图 -->
-      <div class="card">
-        <div class="flex justify-end mb-4">
-          <div class="flex bg-gray-100 dark:bg-gray-800 rounded-md p-1">
-            <button 
-              @click="changeTimeRange('week')" 
-              class="px-3 py-1 text-sm rounded-md" 
-              :class="timeRange === 'week' ? 'bg-white dark:bg-gray-700 shadow-sm' : 'text-gray-600 dark:text-gray-400'"
-            >
-              周
-            </button>
-            <button 
-              @click="changeTimeRange('month')" 
-              class="px-3 py-1 text-sm rounded-md" 
-              :class="timeRange === 'month' ? 'bg-white dark:bg-gray-700 shadow-sm' : 'text-gray-600 dark:text-gray-400'"
-            >
-              月
-            </button>
-            <button 
-              @click="changeTimeRange('year')" 
-              class="px-3 py-1 text-sm rounded-md" 
-              :class="timeRange === 'year' ? 'bg-white dark:bg-gray-700 shadow-sm' : 'text-gray-600 dark:text-gray-400'"
-            >
-              年
-            </button>
-          </div>
-        </div>
-        <div ref="timeSeriesChart" class="h-72"></div>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <!-- 特征相关性图 -->
-      <div class="card">
-        <div ref="featureCorrelationChart" class="h-80"></div>
-      </div>
-
-      <!-- 聚类分析图 -->
-      <div class="card">
-        <div ref="clusteringChart" class="h-80"></div>
-      </div>
+  <div class="container mx-auto p-8">
+    <div class="bg-blue-600 text-white p-8 rounded-lg text-center text-3xl font-bold">
+      测试页面 - 分析
     </div>
   </div>
 </template> 
